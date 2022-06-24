@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    width: 90vw;
+    height: 90vh;
+    background-color: whitesmoke;
+    position: relative;
+    margin: auto;
+    top: 5vh;
+}
+.container .font{
+    height: 80vh;
+    width: 80vh;
+    position: relative;
+    margin: auto;
+    top: calc(90vh/2 - 80vh/2);
+    animation: font 4s 1 7.5s;
+}
+ .font-e{
+    position: absolute;
+    fill: url(#gradient);
+}
+.container .font .top{
+    animation: top 10s;
+}
+.container .font .bottom{
+    stroke: url(#gradient);
+    stroke-width: 3;
+    stroke-dasharray: .333%;
+    animation: bottom 10s;
+}
+.container .font .middle{
+    stroke: url(#gradient);
+    stroke-width: .3;
+    stroke-dasharray: .33%;
+    fill: transparent;
+    animation: middle 10s;
+}
+
+@keyframes top {
+    0%,
+    5%{
+        stroke: url(#gradient);
+        stroke-width: 3;
+        stroke-dasharray: .3333%;
+        fill: whitesmoke;
+        transform: translateY(-100vh);
+    }
+    25%{
+        transform: translate(0);
+        fill: whitesmoke;
+    }
+    30%{
+        stroke: url(#gradient);
+        stroke-width: .01;
+        stroke-dasharray: .3333%;
+        fill: url(#gradient);
+    }
+}
+@keyframes bottom {
+    0%,
+    35%{
+        stroke: url(#gradient);
+        stroke-width: 3;
+        stroke-dasharray: .3333%;
+        fill: whitesmoke;
+        transform: translateY(100vh);
+    }
+    55%{
+        transform: translate(0);
+        fill: whitesmoke;
+    }
+    60%{
+        stroke: url(#gradient);
+        stroke-width: .01;
+        stroke-dasharray: .3333%;
+        fill: url(#gradient);
+    }
+}
+@keyframes middle {
+    0%,
+    65%{
+        stroke: url(#gradient);
+        stroke-width: 3;
+        stroke-dasharray: .3333%;
+        fill: transparent;
+        transform: translateX(100vh);
+    }
+    85%{
+        transform: translate(0);
+        fill: whitesmoke;
+    }
+    90%{
+        stroke: url(#gradient);
+        stroke-width: .01;
+        stroke-dasharray: .3333%;
+    }
+}
+@keyframes font {
+    10%{
+        transform: rotate(10deg) scale(0.9);
+    }
+    12%{
+        transform: rotate(0deg) scale(1.1);
+    }
+    14%{
+        transform: rotate(-10deg) scale(0.9);
+    }
+    16%{
+        transform: rotate(10deg) scale(1.1);
+    }
+    18%{
+        transform: rotate(0deg) scale(0.9);
+    }
+    20%{
+        transform: rotate(-10deg) scale(1.1);
+    }
+    22%{
+        transform: rotate(10deg) scale(0.9);
+    }
+    24%{
+        transform: rotate(0deg) scale(1.1);
+    }
+    26%{
+        transform: rotate(-10deg) scale(0.9);
+    }
+    28%{
+        transform: rotate(10deg) scale(1.1);
+    }
+    30%{
+        transform: rotate(0deg) scale(0.9);
+    }
+    31%{
+        transform: rotate(-45deg) scale(.1) skew(-145deg);
+    }
+}
